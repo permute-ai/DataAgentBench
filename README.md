@@ -149,32 +149,23 @@ Before running DAB, please complete the following setup steps.
 
 ### Clone the Repository
 
-Most datasets in DAB contain large database files exceeding 50MB and are thus stored in Git LFS. To automatically get the full datasets, you need to ensure you have Git LFS enabled **before** cloning:
+Many datasets in DAB contain large database files exceeding 50MB and are tracked with Git LFS. If you want those files to come down during the clone itself, enable Git LFS **before** cloning:
 ```bash
 git lfs install
 ```
-Then you can run:
+Then clone and run the downloader:
 ```bash
 git clone https://github.com/ucbepic/DataAgentBench.git
 cd DataAgentBench
+bash download.sh
 ```
 
-Afterwards, run `download.sh` to fetch the remaining data. The script has two modes, selected with `--mode` (default `1`):
+`download.sh` serves two purposes:
 
-**Mode 1 — Git LFS succeeded (default).**
-One database file of the `PATENTS` dataset, `patent_publication.db`, exceeds Git LFS file-size limits (5GB), so it is hosted on [Google Drive](https://drive.google.com/file/d/1pALQ1UH-OwaEUeGYAx47uCyzClfK94XC/view?usp=sharing) instead. If your clone pulled every LFS file correctly, you only need this one extra file:
-```bash
-bash download.sh            # equivalent to: bash download.sh --mode 1
-```
-(You can also download `patent_publication.db` manually into `query_PATENTS/query_dataset/`.)
+- **Downloads large datasets that aren't on GitHub.** The ~5GB `PATENTS` database (`patent_publication.db`) is too large for the repo, so it's fetched from the Hugging Face mirror.
+- **Repairs failed Git LFS pulls.** If Git LFS wasn't enabled before cloning or hit an error, some tracked files end up missing or as pointer stubs. The script checks each file in [`dataset_manifest.tsv`](./dataset_manifest.tsv) against its sha256 and (re)downloads any mismatch from the [Hugging Face Hub](https://huggingface.co/datasets/ruiyingm/DataAgentBench-data) mirror.
 
-**Mode 2 — some Git LFS files failed; use the Hugging Face mirror.**
-If Git LFS was not installed before cloning, or hit a quota/bandwidth/network error, some tracked files will be missing or left as tiny pointer stubs. A complete mirror of every dataset (including `patent_publication.db`) is available on the [Hugging Face Hub](https://huggingface.co/datasets/ruiyingm/DataAgentBench-data) (~13.4GB total). Download from there:
-```bash
-bash download.sh --mode 2                 # download ALL datasets from Hugging Face
-bash download.sh --mode 2 PATENTS imdb    # download only the named dataset(s)
-```
-A dataset is named by its `query_<NAME>` directory; both `PATENTS` and `query_PATENTS` are accepted. Mode 2 reads [`dataset_manifest.tsv`](./dataset_manifest.tsv) and verifies each downloaded file against a recorded sha256 checksum. Re-running is safe — files already present and the right size are skipped. To re-verify existing files (slow), run `VERIFY_ALL=1 bash download.sh --mode 2`.
+Files that already match are left untouched.
 
 
 ### Install Dependencies
