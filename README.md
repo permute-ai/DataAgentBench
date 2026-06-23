@@ -139,7 +139,7 @@ Before running DAB, please complete the following setup steps.
 
 ### Clone the Repository
 
-Some datasets in DAB contain large database files exceeding 50MB and are thus stored in Git LFS. To automatically get the full datasets, you need to ensure you have Git LFS enabled:
+Most datasets in DAB contain large database files exceeding 50MB and are thus stored in Git LFS. To automatically get the full datasets, you need to ensure you have Git LFS enabled **before** cloning:
 ```bash
 git lfs install
 ```
@@ -148,16 +148,23 @@ Then you can run:
 git clone https://github.com/ucbepic/DataAgentBench.git
 cd DataAgentBench
 ```
-One database file of `PATENTS` dataset, `patent_publication.db`, exceeds Git LFS file-size limits (5GB). It is on [Google Drive](https://drive.google.com/file/d/1pALQ1UH-OwaEUeGYAx47uCyzClfK94XC/view?usp=sharing).
 
-**Option 1:**
-Manually download the database to `query_PATENTS/query_dataset/patent_publication.db`
+Afterwards, run `download.sh` to fetch the remaining data. The script has two modes, selected with `--mode` (default `1`):
 
-**Option 2:**
-Run the following script to automatically download the database:
+**Mode 1 — Git LFS succeeded (default).**
+One database file of the `PATENTS` dataset, `patent_publication.db`, exceeds Git LFS file-size limits (5GB), so it is hosted on [Google Drive](https://drive.google.com/file/d/1pALQ1UH-OwaEUeGYAx47uCyzClfK94XC/view?usp=sharing) instead. If your clone pulled every LFS file correctly, you only need this one extra file:
 ```bash
-bash download.sh
+bash download.sh            # equivalent to: bash download.sh --mode 1
 ```
+(You can also download `patent_publication.db` manually into `query_PATENTS/query_dataset/`.)
+
+**Mode 2 — some Git LFS files failed; use the Hugging Face mirror.**
+If Git LFS was not installed before cloning, or hit a quota/bandwidth/network error, some tracked files will be missing or left as tiny pointer stubs. A complete mirror of every dataset (including `patent_publication.db`) is available on the [Hugging Face Hub](https://huggingface.co/datasets/ruiyingm/DataAgentBench-data) (~13.4GB total). Download from there:
+```bash
+bash download.sh --mode 2                 # download ALL datasets from Hugging Face
+bash download.sh --mode 2 PATENTS imdb    # download only the named dataset(s)
+```
+A dataset is named by its `query_<NAME>` directory; both `PATENTS` and `query_PATENTS` are accepted. Mode 2 reads [`dataset_manifest.tsv`](./dataset_manifest.tsv) and verifies each downloaded file against a recorded sha256 checksum. Re-running is safe — files already present and the right size are skipped. To re-verify existing files (slow), run `VERIFY_ALL=1 bash download.sh --mode 2`.
 
 
 ### Install Dependencies
