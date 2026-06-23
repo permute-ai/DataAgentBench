@@ -86,6 +86,7 @@ To contribute your agent's results to the DAB leaderboard:
 3. Submit a **Pull Request** to this repository including:
 
    * The JSON results file
+   * **Execution traces** for your runs (the agent's step-by-step logs/transcripts), so results can be independently verified
    * A brief description of your agent configuration, including:
 
       - The name of your agent
@@ -96,7 +97,7 @@ To contribute your agent's results to the DAB leaderboard:
 
       - Any additional notes or special settings you want to highlight
 
-⚠️ You must include all 5 runs for each query in your dataset. Missing runs may result in your submission being rejected from the leaderboard.
+⚠️ You must include all 5 runs for each query in your dataset, along with their execution traces. Missing runs or missing traces may result in your submission being rejected from the leaderboard.
 
 
 ## 📚 Table of Contents
