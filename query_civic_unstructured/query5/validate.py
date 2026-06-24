@@ -1,6 +1,6 @@
 import re
 
-GROUND_TRUTH = 3722235.29
+GROUND_TRUTH = 4401352.94
 TOL = 0.1
 
 
