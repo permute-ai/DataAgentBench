@@ -10,6 +10,7 @@ claude_projects/
 
 # results
 results/
+failed_traces_claude_code_sonnet_4_6/
 
 # dependencies
 requirements.txt
@@ -19,6 +20,8 @@ python_script/
 bash_script/
 repo_cleaning_scripts/
 test/
+plotting_scripts/
+stats_scripts/
 
 # failure_analysis/
 failure_analysis/*
@@ -51,7 +54,9 @@ query_krama/query_dataset/misc_files/
 query_krama/query_dataset/geo.db
 query_krama/query*/ground_truth.py
 query_krama/scripts/
-query_civic_unstructured/
+query_civic_unstructured_old/
+query_civic_unstructured/query*/compute_ground_truth.py
+query_civic_unstructured/ground_truth_dataset/
 query_paper_unstructured/
 query_notice_unstructured/
 potentialdb_for_query_snowflake
@@ -75,7 +80,8 @@ query_googlelocal/query3_abandon/
 query_googlelocal/db_description_mysqlversion.txt
 query_googlelocal/origi_dataset/
 query_googlelocal/query_dataset/business_description_mysql.sql
-query_googlelocal/query*/ground_truth.py
+query_googlelocal/query*/ground_truth.pyqq
+query_music_brainz_20k/ground_truth_dataset/
 query_music_brainz_20k/create_databases.py
 query_music_brainz_20k/create_queries.py
 query_music_brainz_20k/create_track_repre.py
