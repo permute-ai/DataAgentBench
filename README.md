@@ -44,7 +44,7 @@ Unlike prior SQL-only or single-database benchmarks, DAB stresses agents under *
 | 13   | Claude-Opus-4.6 | 0.5468 | 5 | Yes | 2026-03-18 | [#22](https://github.com/ucbepic/DataAgentBench/pull/22) |
 | 14   | LabRat (Claude-Sonnet-4.6) ³ | 0.5138 | 5 | No | 2026-06-01 | [#54](https://github.com/ucbepic/DataAgentBench/pull/54) |
 | 15   | Oracle Forge — Team PaLM (Gemini-3.1-Pro-Preview) ⁴ | 0.4721 | 5 | Yes | 2026-05-10 | [#37](https://github.com/ucbepic/DataAgentBench/pull/37) |
-| 16   | nQuery (gpt-oss-safeguard-120b) | 0.4547 | 5 | Yes | 2026-07-02 | [#56](https://github.com/ucbepic/DataAgentBench/pull/56) |
+| 16   | nQuery (gpt-oss-safeguard-120b) NGENUX SOLUTIONS PVT LTD | 0.4547 | 5 | Yes | 2026-07-02 | [#56](https://github.com/ucbepic/DataAgentBench/pull/56) |
 | 17   | Gemini-3-Pro | 0.4546 | 50 | Yes | 2026-03-02 | — |
 | 18   | Oracle Forge — Tenacious Intelligence (Claude-Sonnet-4.6) ⁵ | 0.4464 | 5–7 | No | 2026-04-21 | [#32](https://github.com/ucbepic/DataAgentBench/pull/32) |
 | 19   | GPT-5-mini | 0.3647 | 50 | Yes | 2026-03-02 | — |
