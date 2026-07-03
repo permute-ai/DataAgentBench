@@ -44,13 +44,14 @@ Unlike prior SQL-only or single-database benchmarks, DAB stresses agents under *
 | 13   | Claude-Opus-4.6 | 0.5468 | 5 | Yes | 2026-03-18 | [#22](https://github.com/ucbepic/DataAgentBench/pull/22) |
 | 14   | LabRat (Claude-Sonnet-4.6) ³ | 0.5138 | 5 | No | 2026-06-01 | [#54](https://github.com/ucbepic/DataAgentBench/pull/54) |
 | 15   | Oracle Forge — Team PaLM (Gemini-3.1-Pro-Preview) ⁴ | 0.4721 | 5 | Yes | 2026-05-10 | [#37](https://github.com/ucbepic/DataAgentBench/pull/37) |
-| 16   | Gemini-3-Pro | 0.4546 | 50 | Yes | 2026-03-02 | — |
-| 17   | Oracle Forge — Tenacious Intelligence (Claude-Sonnet-4.6) ⁵ | 0.4464 | 5–7 | No | 2026-04-21 | [#32](https://github.com/ucbepic/DataAgentBench/pull/32) |
-| 18   | GPT-5-mini | 0.3647 | 50 | Yes | 2026-03-02 | — |
-| 19   | GPT-5.2 | 0.2991 | 50 | Yes | 2026-03-02 | — |
-| 20   | Kimi-K2 | 0.2925 | 50 | Yes | 2026-03-02 | — |
-| 21   | Oracle Forge — Team Cohere (Gemini-2.0-Flash) | 0.1671 | 5 | Yes | 2026-04-21 | [#38](https://github.com/ucbepic/DataAgentBench/pull/38) |
-| 22   | Gemini-2.5-Flash | 0.1041 | 50 | Yes | 2026-03-02 | — |
+| 16   | TOT-SQL Safeguard (gpt-oss-safeguard-120b) | 0.4547 | 5 | Yes | 2026-07-02 | [#56](https://github.com/ucbepic/DataAgentBench/pull/56) |
+| 17   | Gemini-3-Pro | 0.4546 | 50 | Yes | 2026-03-02 | — |
+| 18   | Oracle Forge — Tenacious Intelligence (Claude-Sonnet-4.6) ⁵ | 0.4464 | 5–7 | No | 2026-04-21 | [#32](https://github.com/ucbepic/DataAgentBench/pull/32) |
+| 19   | GPT-5-mini | 0.3647 | 50 | Yes | 2026-03-02 | — |
+| 20   | GPT-5.2 | 0.2991 | 50 | Yes | 2026-03-02 | — |
+| 21   | Kimi-K2 | 0.2925 | 50 | Yes | 2026-03-02 | — |
+| 22   | Oracle Forge — Team Cohere (Gemini-2.0-Flash) | 0.1671 | 5 | Yes | 2026-04-21 | [#38](https://github.com/ucbepic/DataAgentBench/pull/38) |
+| 23   | Gemini-2.5-Flash | 0.1041 | 50 | Yes | 2026-03-02 | — |
 
 <sub>**¹ Methodology.** All Pass@1 scores recomputed on 2026-06-12 by re-running each query's `validate.py` against the current validators (including the regenerated PATENTS ground truths), from the submission JSONs stored in this repository (`submissions/`, `leaderboard_submissions/`) or in the corresponding submission PR branches (`refs/pull/<N>/head`). Pass@1 is the mean over datasets of each dataset's average per-query pass rate.</sub>
 

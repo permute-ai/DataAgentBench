@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26",
+  "updatedAt": "2026-07-02",
   "sources": [
     "All Pass@1 scores recomputed 2026-06-12 by re-running each query's validate.py under the current validators (including the regenerated PATENTS ground truths), from the submission JSONs in this repository or in the corresponding submission PR branches",
     "PromptQL and baseline stratified tables: re-scored 2026-06-12 from the stored submission JSONs"
@@ -159,6 +159,17 @@
     },
     {
       "rank": 16,
+      "agent": "TOT-SQL Safeguard (gpt-oss-safeguard-120b)",
+      "trials": 5,
+      "passAt1": 0.4547,
+      "team": "TOT-SQL Safeguard",
+      "teamUrl": "https://github.com/ucbepic/DataAgentBench/pull/56",
+      "prUrl": "https://github.com/ucbepic/DataAgentBench/pull/56",
+      "date": "2026-07-02",
+      "note": "Uses the sanctioned db_description_withhint.txt files (hints used), despite the PR's 'Hint: No' label."
+    },
+    {
+      "rank": 17,
       "agent": "Gemini-3-Pro ReAct",
       "trials": 50,
       "passAt1": 0.4546,
@@ -167,7 +178,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 17,
+      "rank": 18,
       "agent": "Oracle Forge (Tenacious Intelligence) + Claude Sonnet 4.6",
       "trials": 5,
       "passAt1": 0.4464,
@@ -177,7 +188,7 @@
       "date": "2026-04-21"
     },
     {
-      "rank": 18,
+      "rank": 19,
       "agent": "GPT-5-mini ReAct",
       "trials": 50,
       "passAt1": 0.3647,
@@ -186,7 +197,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 19,
+      "rank": 20,
       "agent": "GPT-5.2 ReAct",
       "trials": 50,
       "passAt1": 0.2991,
@@ -195,7 +206,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 20,
+      "rank": 21,
       "agent": "Kimi-K2 ReAct",
       "trials": 50,
       "passAt1": 0.2925,
@@ -204,7 +215,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 21,
+      "rank": 22,
       "agent": "Oracle Forge (Team Cohere) + Gemini 2.0 Flash",
       "trials": 5,
       "passAt1": 0.1671,
@@ -214,7 +225,7 @@
       "date": "2026-04-21"
     },
     {
-      "rank": 22,
+      "rank": 23,
       "agent": "Gemini-2.5-Flash ReAct",
       "trials": 50,
       "passAt1": 0.1041,
