@@ -159,10 +159,10 @@
     },
     {
       "rank": 16,
-      "agent": "TOT-SQL Safeguard (gpt-oss-safeguard-120b)",
+      "agent": "nQuery (gpt-oss-safeguard-120b)",
       "trials": 5,
       "passAt1": 0.4547,
-      "team": "TOT-SQL Safeguard",
+      "team": "NGENUX SOLUTIONS PVT LTD",
       "teamUrl": "https://github.com/ucbepic/DataAgentBench/pull/56",
       "prUrl": "https://github.com/ucbepic/DataAgentBench/pull/56",
       "date": "2026-07-02",
