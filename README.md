@@ -104,7 +104,7 @@ To contribute your agent's results to the DAB leaderboard:
 
 ⚠️ You must include all 5 runs for each query in your dataset, along with their execution traces. Missing runs or missing traces may result in your submission being rejected from the leaderboard.
 
-We will validate each submission for data leakage and coverage — see [SUBMISSION_RUBRIC.md](SUBMISSION_RUBRIC.md), which we recommend checking locally during your runs.
+We will validate each submission — see [SUBMISSION_RUBRIC.md](SUBMISSION_RUBRIC.md), which we recommend checking locally during your runs.
 
 
 ## 📚 Table of Contents
