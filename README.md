@@ -32,26 +32,27 @@ Unlike prior SQL-only or single-database benchmarks, DAB stresses agents under *
 | 1    | SCRIBE (Actioneer) (Claude-Opus-4.7) ⁶ | 0.8185 | 5 | Yes | 2026-06-26 | [#67](https://github.com/ucbepic/DataAgentBench/pull/67) |
 | 2    | Spacedock (Recce) (GPT-5.5) | 0.7433 | 5 | Yes | 2026-06-23 | [#63](https://github.com/ucbepic/DataAgentBench/pull/63) |
 | 3    | Altimate Code (GPT-5.5 + Claude Sonnet 4.6) | 0.7171 | 5 | Yes | 2026-06-01 | [#53](https://github.com/ucbepic/DataAgentBench/pull/53) |
-| 4    | Altimate Code (Claude-Sonnet-4.6) | 0.6822 | 5 | Yes | 2026-05-10 | [#44](https://github.com/ucbepic/DataAgentBench/pull/44) |
-| 5    | Spacedock (Recce) (Claude-Opus-4.8) | 0.6721 | 5 | Yes | 2026-06-08 | [#55](https://github.com/ucbepic/DataAgentBench/pull/55) |
-| 6    | MinusX (Claude Sonnet 4.6 + GPT5.5-mini + Claude Haiku 4.5) | 0.6518 | 5 | Yes | 2026-05-21 | [#50](https://github.com/ucbepic/DataAgentBench/pull/50) |
-| 7    | DataBridge (GLM-5.2) ² | 0.6137 | 6 | Yes | 2026-06-22 | [#61](https://github.com/ucbepic/DataAgentBench/pull/61) |
-| 8    | Pi Coding Agent (Claude-Opus-4.6) | 0.6103 | 5 | Yes | 2026-04-21 | [#31](https://github.com/ucbepic/DataAgentBench/pull/31) |
-| 9    | LabRat (Claude-Sonnet-4.6 + Cartographer) | 0.6088 | 5 | Yes | 2026-06-24 | [#65](https://github.com/ucbepic/DataAgentBench/pull/65) |
-| 10   | PromptQL (Gemini-3.1-Pro) | 0.6000 | 5 | Yes | 2026-03-18 | [#24](https://github.com/ucbepic/DataAgentBench/pull/24) |
-| 11   | PromptQL (Claude-Opus-4.6) | 0.5933 | 5 | Yes | 2026-03-02 | [#23](https://github.com/ucbepic/DataAgentBench/pull/23) |
-| 12   | Spacedock (Recce) (Claude-Opus-4.6) | 0.5828 | 5 | No | 2026-05-08 | [#47](https://github.com/ucbepic/DataAgentBench/pull/47) |
-| 13   | Claude-Opus-4.6 | 0.5468 | 5 | Yes | 2026-03-18 | [#22](https://github.com/ucbepic/DataAgentBench/pull/22) |
-| 14   | LabRat (Claude-Sonnet-4.6) ³ | 0.5138 | 5 | No | 2026-06-01 | [#54](https://github.com/ucbepic/DataAgentBench/pull/54) |
-| 15   | Oracle Forge — Team PaLM (Gemini-3.1-Pro-Preview) ⁴ | 0.4721 | 5 | Yes | 2026-05-10 | [#37](https://github.com/ucbepic/DataAgentBench/pull/37) |
-| 16   | nQuery (gpt-oss-safeguard-120b) NGENUX SOLUTIONS PVT LTD | 0.4547 | 5 | Yes | 2026-07-02 | [#56](https://github.com/ucbepic/DataAgentBench/pull/56) |
-| 17   | Gemini-3-Pro | 0.4546 | 50 | Yes | 2026-03-02 | — |
-| 18   | Oracle Forge — Tenacious Intelligence (Claude-Sonnet-4.6) ⁵ | 0.4464 | 5–7 | No | 2026-04-21 | [#32](https://github.com/ucbepic/DataAgentBench/pull/32) |
-| 19   | GPT-5-mini | 0.3647 | 50 | Yes | 2026-03-02 | — |
-| 20   | GPT-5.2 | 0.2991 | 50 | Yes | 2026-03-02 | — |
-| 21   | Kimi-K2 | 0.2925 | 50 | Yes | 2026-03-02 | — |
-| 22   | Oracle Forge — Team Cohere (Gemini-2.0-Flash) | 0.1671 | 5 | Yes | 2026-04-21 | [#38](https://github.com/ucbepic/DataAgentBench/pull/38) |
-| 23   | Gemini-2.5-Flash | 0.1041 | 50 | Yes | 2026-03-02 | — |
+| 4    | AgenDA (Claude-Opus-4.8) | 0.6911 | 5 | Yes | 2026-07-10 | [#68](https://github.com/ucbepic/DataAgentBench/pull/68) |
+| 5    | Altimate Code (Claude-Sonnet-4.6) | 0.6822 | 5 | Yes | 2026-05-10 | [#44](https://github.com/ucbepic/DataAgentBench/pull/44) |
+| 6    | Spacedock (Recce) (Claude-Opus-4.8) | 0.6721 | 5 | Yes | 2026-06-08 | [#55](https://github.com/ucbepic/DataAgentBench/pull/55) |
+| 7    | MinusX (Claude Sonnet 4.6 + GPT5.5-mini + Claude Haiku 4.5) | 0.6518 | 5 | Yes | 2026-05-21 | [#50](https://github.com/ucbepic/DataAgentBench/pull/50) |
+| 8    | DataBridge (GLM-5.2) ² | 0.6137 | 6 | Yes | 2026-06-22 | [#61](https://github.com/ucbepic/DataAgentBench/pull/61) |
+| 9    | Pi Coding Agent (Claude-Opus-4.6) | 0.6103 | 5 | Yes | 2026-04-21 | [#31](https://github.com/ucbepic/DataAgentBench/pull/31) |
+| 10   | LabRat (Claude-Sonnet-4.6 + Cartographer) | 0.6088 | 5 | Yes | 2026-06-24 | [#65](https://github.com/ucbepic/DataAgentBench/pull/65) |
+| 11   | PromptQL (Gemini-3.1-Pro) | 0.6000 | 5 | Yes | 2026-03-18 | [#24](https://github.com/ucbepic/DataAgentBench/pull/24) |
+| 12   | PromptQL (Claude-Opus-4.6) | 0.5933 | 5 | Yes | 2026-03-02 | [#23](https://github.com/ucbepic/DataAgentBench/pull/23) |
+| 13   | Spacedock (Recce) (Claude-Opus-4.6) | 0.5828 | 5 | No | 2026-05-08 | [#47](https://github.com/ucbepic/DataAgentBench/pull/47) |
+| 14   | Claude-Opus-4.6 | 0.5468 | 5 | Yes | 2026-03-18 | [#22](https://github.com/ucbepic/DataAgentBench/pull/22) |
+| 15   | LabRat (Claude-Sonnet-4.6) ³ | 0.5138 | 5 | No | 2026-06-01 | [#54](https://github.com/ucbepic/DataAgentBench/pull/54) |
+| 16   | Oracle Forge — Team PaLM (Gemini-3.1-Pro-Preview) ⁴ | 0.4721 | 5 | Yes | 2026-05-10 | [#37](https://github.com/ucbepic/DataAgentBench/pull/37) |
+| 17   | nQuery (gpt-oss-safeguard-120b) NGENUX SOLUTIONS PVT LTD | 0.4547 | 5 | Yes | 2026-07-02 | [#56](https://github.com/ucbepic/DataAgentBench/pull/56) |
+| 18   | Gemini-3-Pro | 0.4546 | 50 | Yes | 2026-03-02 | — |
+| 19   | Oracle Forge — Tenacious Intelligence (Claude-Sonnet-4.6) ⁵ | 0.4464 | 5–7 | No | 2026-04-21 | [#32](https://github.com/ucbepic/DataAgentBench/pull/32) |
+| 20   | GPT-5-mini | 0.3647 | 50 | Yes | 2026-03-02 | — |
+| 21   | GPT-5.2 | 0.2991 | 50 | Yes | 2026-03-02 | — |
+| 22   | Kimi-K2 | 0.2925 | 50 | Yes | 2026-03-02 | — |
+| 23   | Oracle Forge — Team Cohere (Gemini-2.0-Flash) | 0.1671 | 5 | Yes | 2026-04-21 | [#38](https://github.com/ucbepic/DataAgentBench/pull/38) |
+| 24   | Gemini-2.5-Flash | 0.1041 | 50 | Yes | 2026-03-02 | — |
 
 <sub>**¹ Methodology.** All Pass@1 scores recomputed on 2026-06-12 by re-running each query's `validate.py` against the current validators (including the regenerated PATENTS ground truths), from the submission JSONs stored in this repository (`submissions/`, `leaderboard_submissions/`) or in the corresponding submission PR branches (`refs/pull/<N>/head`). Pass@1 is the mean over datasets of each dataset's average per-query pass rate.</sub>
 
