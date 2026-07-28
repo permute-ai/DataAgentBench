@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-07-28",
   "sources": [
     "All Pass@1 scores recomputed 2026-06-12 by re-running each query's validate.py under the current validators (including the regenerated PATENTS ground truths), from the submission JSONs in this repository or in the corresponding submission PR branches",
     "PromptQL and baseline stratified tables: re-scored 2026-06-12 from the stored submission JSONs"
@@ -31,6 +31,18 @@
     },
     {
       "rank": 3,
+      "agent": "Sarvam Code v0.36 (GLM-5.2)",
+      "trials": 5,
+      "passAt1": 0.8208,
+      "promptGroup": "benchmark-informed",
+      "team": "Sarvam Code",
+      "teamUrl": "https://github.com/ucbepic/DataAgentBench/pull/75",
+      "prUrl": "https://github.com/ucbepic/DataAgentBench/pull/75",
+      "date": "2026-07-28",
+      "note": "Single data-engineering agent (sarvam-code CLI v0.36.0, GLM-5.2, max reasoning) running shell + SQL over each task's sanctioned stores, with a deterministic answer gate and one blind second solver (original question only, no inherited context) as a cross-check. Uses db_description_withhint.txt hints. Same team and backbone as #74 (0.7812) with an upgraded agent harness. Every opening prompt is the verbatim benchmark question with no injected plan or spec; no network fetches in any of the 270 traces and no ground-truth or off-limits reads (the container holds only db_config.yaml, the two db_description files and query_dataset/). The bundled agent skill is benchmark-agnostic methodology with no per-dataset rules; one numeric formatting example in it coincides with the yelp/query1 gold value, and all five yelp/query1 trials derive that number independently from the sanctioned stores. Full execution traces provided for all 270 trials."
+    },
+    {
+      "rank": 4,
       "agent": "SCRIBE (Actioneer) + Claude Opus 4.7",
       "trials": 5,
       "passAt1": 0.8185,
@@ -42,7 +54,7 @@
       "note": "Two-stage spec/executor pipeline whose planner is prompted with DAB-specific domain rules (validator output conventions, code-vs-name columns, date-column selection, per-domain parsing) and derives the interpretation and plan up front from sanctioned data."
     },
     {
-      "rank": 4,
+      "rank": 5,
       "agent": "Alkera + Claude Opus 4.8",
       "trials": 5,
       "passAt1": 0.8044,
@@ -54,8 +66,8 @@
       "note": "Runs a single benchmark-agnostic \"data engineering best practices\" system addendum, identical across all 270 trials; its only decisive analytical conventions restate the benchmark's own db_description_withhint.txt hints, with no gold values, per-dataset rules, or validator references. Full execution traces provided for all 270 trials."
     },
     {
-      "rank": 5,
-      "agent": "Sarvam Code (GLM-5.2)",
+      "rank": 6,
+      "agent": "Sarvam Code v0.35 (GLM-5.2)",
       "trials": 5,
       "passAt1": 0.7812,
       "promptGroup": "benchmark-informed",
@@ -66,7 +78,7 @@
       "note": "Single data-engineering agent (sarvam-code CLI v0.35.0, GLM-5.2, max reasoning) running shell + SQL over each task's sanctioned stores, with a deterministic self-consistency answer gate and one blind second solver (original question only, no inherited context) as a cross-check. Uses db_description_withhint.txt hints. Every opening prompt is the verbatim benchmark question with no injected gold values, per-dataset rules, or validator references; no network fetches (the single network attempt fails on DNS) and no off-limits or ground-truth reads. Full execution traces provided for all 270 trials."
     },
     {
-      "rank": 6,
+      "rank": 7,
       "agent": "Spacedock (Recce) + OpenAI GPT-5.5",
       "trials": 5,
       "passAt1": 0.7433,
@@ -77,7 +89,7 @@
       "date": "2026-06-23"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "agent": "LabRat (GPT-5.6 Luna Max + Cartographer)",
       "trials": 5,
       "passAt1": 0.7418,
@@ -88,7 +100,7 @@
       "date": "2026-07-16"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "agent": "Altimate Code + GPT-5.5 + Claude Sonnet 4.6",
       "trials": 5,
       "passAt1": 0.7171,
@@ -99,7 +111,7 @@
       "date": "2026-06-01"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "agent": "AgenDA + Claude Opus 4.8",
       "trials": 5,
       "passAt1": 0.6911,
@@ -110,7 +122,7 @@
       "date": "2026-07-10"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "agent": "Altimate Code + Claude Sonnet 4.6",
       "trials": 5,
       "passAt1": 0.6822,
@@ -121,7 +133,7 @@
       "date": "2026-05-10"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "agent": "Spacedock (Recce) + Claude Opus 4.8",
       "trials": 5,
       "passAt1": 0.6721,
@@ -132,7 +144,7 @@
       "date": "2026-06-08"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "agent": "MinusX + Claude Sonnet 4.6 + GPT-5.5-mini + Claude Haiku 4.5",
       "trials": 5,
       "passAt1": 0.6518,
@@ -143,7 +155,7 @@
       "date": "2026-05-21"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "agent": "DataBridge + GLM-5.2",
       "trials": 6,
       "passAt1": 0.6137,
@@ -155,7 +167,7 @@
       "note": "6-run average; only 1 run includes open-source execution traces; runs on a large system prompt that hard-codes dataset-specific handling rules (e.g. bracket-notation null codes, weighted decade-averaging, diacritic/parenthetical normalization)"
     },
     {
-      "rank": 14,
+      "rank": 15,
       "agent": "Pi Coding Agent + Claude Opus 4.6",
       "trials": 5,
       "passAt1": 0.6103,
@@ -166,7 +178,7 @@
       "date": "2026-04-21"
     },
     {
-      "rank": 15,
+      "rank": 16,
       "agent": "LabRat (Claude Sonnet 4.6 + Cartographer)",
       "trials": 5,
       "passAt1": 0.6088,
@@ -177,7 +189,7 @@
       "date": "2026-06-24"
     },
     {
-      "rank": 16,
+      "rank": 17,
       "agent": "PromptQL + Gemini 3.1 Pro",
       "trials": 5,
       "passAt1": 0.6,
@@ -188,7 +200,7 @@
       "date": "2026-03-18"
     },
     {
-      "rank": 17,
+      "rank": 18,
       "agent": "PromptQL + Claude Opus 4.6",
       "trials": 5,
       "passAt1": 0.5933,
@@ -199,7 +211,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 18,
+      "rank": 19,
       "agent": "Spacedock (Recce) + Claude Opus 4.6",
       "trials": 5,
       "passAt1": 0.5828,
@@ -210,7 +222,7 @@
       "date": "2026-05-08"
     },
     {
-      "rank": 19,
+      "rank": 20,
       "agent": "Claude Opus 4.6 ReAct",
       "trials": 5,
       "passAt1": 0.5468,
@@ -221,7 +233,7 @@
       "date": "2026-03-18"
     },
     {
-      "rank": 20,
+      "rank": 21,
       "agent": "LabRat (Claude Sonnet 4.6)",
       "trials": 5,
       "passAt1": 0.5138,
@@ -232,7 +244,7 @@
       "date": "2026-06-01"
     },
     {
-      "rank": 21,
+      "rank": 22,
       "agent": "Oracle Forge (Team PaLM) + Gemini 3.1 Pro Preview",
       "trials": 5,
       "passAt1": 0.4721,
@@ -243,7 +255,7 @@
       "date": "2026-04-19"
     },
     {
-      "rank": 22,
+      "rank": 23,
       "agent": "nQuery (gpt-oss-safeguard-120b)",
       "trials": 5,
       "passAt1": 0.4547,
@@ -255,7 +267,7 @@
       "note": "Uses the sanctioned db_description_withhint.txt files (hints used), despite the PR's 'Hint: No' label."
     },
     {
-      "rank": 23,
+      "rank": 24,
       "agent": "Gemini-3-Pro ReAct",
       "trials": 50,
       "passAt1": 0.4546,
@@ -265,7 +277,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 24,
+      "rank": 25,
       "agent": "Oracle Forge (Tenacious Intelligence) + Claude Sonnet 4.6",
       "trials": 5,
       "passAt1": 0.4464,
@@ -276,7 +288,7 @@
       "date": "2026-04-21"
     },
     {
-      "rank": 25,
+      "rank": 26,
       "agent": "GPT-5-mini ReAct",
       "trials": 50,
       "passAt1": 0.3647,
@@ -286,7 +298,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 26,
+      "rank": 27,
       "agent": "GPT-5.2 ReAct",
       "trials": 50,
       "passAt1": 0.2991,
@@ -296,7 +308,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 27,
+      "rank": 28,
       "agent": "Kimi-K2 ReAct",
       "trials": 50,
       "passAt1": 0.2925,
@@ -306,7 +318,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 28,
+      "rank": 29,
       "agent": "Oracle Forge (Team Cohere) + Gemini 2.0 Flash",
       "trials": 5,
       "passAt1": 0.1671,
@@ -317,7 +329,7 @@
       "date": "2026-04-21"
     },
     {
-      "rank": 29,
+      "rank": 30,
       "agent": "Gemini-2.5-Flash ReAct",
       "trials": 50,
       "passAt1": 0.1041,
