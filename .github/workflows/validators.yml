@@ -1,0 +1,32 @@
+name: Validators
+
+on:
+  pull_request:
+    paths:
+      - "query_*/**/validate.py"
+      - "tests/**"
+      - ".github/workflows/validators.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "query_*/**/validate.py"
+      - "tests/**"
+      - ".github/workflows/validators.yml"
+  workflow_dispatch:
+
+jobs:
+  reject-refusals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The test uses only the standard library, so there is nothing to install.
+      - name: Assert every validator rejects a refusal
+        run: python -m unittest discover -s tests -v
