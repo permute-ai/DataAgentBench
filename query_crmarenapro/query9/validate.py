@@ -23,7 +23,7 @@ def validate(llm_output: str):
     llm_output_clean = llm_output.strip()
 
     # Check for exact state match (case insensitive)
-    if expected.upper() in llm_output_clean.upper():
+    if re.search(r'\b' + re.escape(expected) + r'\b', llm_output_clean, re.IGNORECASE):
         return True, f"Found expected state: {expected}"
 
     # Check if any valid state abbreviation is mentioned
