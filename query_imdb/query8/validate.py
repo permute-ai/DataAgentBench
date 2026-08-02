@@ -4,7 +4,9 @@ import re
 def normalize(text):
     # strip thousands-separator commas, then remove non-alphanumeric
     text = re.sub(r"(?<=\d),(?=\d{3}\b)", "", text)
-    text = re.sub(r"[^a-z0-9\s]", " ", text.lower())
+    text = text.lower()
+    text = re.sub(r"['\u2019`]", "", text)  # drop apostrophes so "Cockamamie's" -> "cockamamies"
+    text = re.sub(r"[^a-z0-9\s]", " ", text)
     return re.sub(r"\s+", " ", text).strip()
 
 
