@@ -84,7 +84,7 @@ class DataAgent:
                 api_key=os.getenv("GEMINI_API_KEY"),
                 base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
             )
-        elif "kimi" in deployment_name.lower() or "qwen" in deployment_name.lower():
+        elif "kimi" in deployment_name.lower():
             self.client = OpenAI(
                 api_key=os.getenv("TOGETHER_API_KEY"),
                 base_url="https://api.together.xyz/v1",

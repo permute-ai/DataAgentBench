@@ -273,7 +273,7 @@ TOGETHER_API_KEY=
 Currently, we support 
 - Microsoft Azure API (for GPT models)
 - Google Gemini API (for Gemini models)
-- Together.AI API (for Kimi and Qwen models)
+- Together.AI API (for Kimi models)
 
 If you want to use a model not yet supported by default, you may register it in [DataAgent.py](./common_scaffold/DataAgent.py):
 ```python
