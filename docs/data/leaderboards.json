@@ -67,6 +67,18 @@
     },
     {
       "rank": 6,
+      "agent": "LabRat (Claude Opus 5 + Cartographer)",
+      "trials": 5,
+      "passAt1": 0.8018,
+      "promptGroup": "benchmark-informed",
+      "team": "LabRat",
+      "teamUrl": "https://github.com/esagduyu/labrat",
+      "prUrl": "https://github.com/ucbepic/DataAgentBench/pull/84",
+      "date": "2026-08-03",
+      "note": "Claude Opus 5 (high reasoning) driving the LabRat MCP tool suite (schema catalog, profiling, SQL with error-category repair hints, join verification, local-embedding classification, result ledger) over each task's sanctioned stores, with a deterministic GT-firewalled Cartographer pre-pass and four benchmark-informed prompt rule packs. Uses db_description_withhint.txt hints. The packs are per-dataset at their finest and never per-query, and carry no gold content: none of the 154 ground-truth numbers or 228 ground-truth strings appear in any prompt, and each prompt's question region matches db_description.txt, db_description_withhint.txt and query.json exactly. Two per-dataset lines state interpretation choices absent from the hints (github_repos file population, deps_dev composite identifiers), but every trial of the two queries they bear on failed. Across 4,123 tool calls in 268 traces there are no network fetches, no off-limits or ground-truth reads, and every attached store is sanctioned; agnews categories come from the agent's own local-embedding classifier rather than external labels. Missing 2 of 270 trials (agnews query 4, infra timeouts) counted as non-passes; excluding them gives 0.8102."
+    },
+    {
+      "rank": 7,
       "agent": "Sarvam Code v0.35 (GLM-5.2)",
       "trials": 5,
       "passAt1": 0.7812,
@@ -78,7 +90,7 @@
       "note": "Single data-engineering agent (sarvam-code CLI v0.35.0, GLM-5.2, max reasoning) running shell + SQL over each task's sanctioned stores, with a deterministic self-consistency answer gate and one blind second solver (original question only, no inherited context) as a cross-check. Uses db_description_withhint.txt hints. Every opening prompt is the verbatim benchmark question with no injected gold values, per-dataset rules, or validator references; no network fetches (the single network attempt fails on DNS) and no off-limits or ground-truth reads. Full execution traces provided for all 270 trials."
     },
     {
-      "rank": 7,
+      "rank": 8,
       "agent": "Spacedock (Recce) + OpenAI GPT-5.5",
       "trials": 5,
       "passAt1": 0.7433,
@@ -89,7 +101,7 @@
       "date": "2026-06-23"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "agent": "LabRat (GPT-5.6 Luna Max + Cartographer)",
       "trials": 5,
       "passAt1": 0.7418,
@@ -100,7 +112,7 @@
       "date": "2026-07-16"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "agent": "Altimate Code + GPT-5.5 + Claude Sonnet 4.6",
       "trials": 5,
       "passAt1": 0.7171,
@@ -111,7 +123,7 @@
       "date": "2026-06-01"
     },
     {
-      "rank": 10,
+      "rank": 11,
       "agent": "AgenDA + Claude Opus 4.8",
       "trials": 5,
       "passAt1": 0.6911,
@@ -122,7 +134,7 @@
       "date": "2026-07-10"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "agent": "Altimate Code + Claude Sonnet 4.6",
       "trials": 5,
       "passAt1": 0.6822,
@@ -133,7 +145,7 @@
       "date": "2026-05-10"
     },
     {
-      "rank": 12,
+      "rank": 13,
       "agent": "Spacedock (Recce) + Claude Opus 4.8",
       "trials": 5,
       "passAt1": 0.6721,
@@ -144,7 +156,7 @@
       "date": "2026-06-08"
     },
     {
-      "rank": 13,
+      "rank": 14,
       "agent": "fabric-rlm (GPT-5.6 Luna Max)",
       "trials": 5,
       "passAt1": 0.6623,
@@ -156,7 +168,7 @@
       "note": "Notebook-importable Recursive Language Model library (PyPI fabric-rlm), not an agent CLI: per trial the dataset's sanctioned stores are consolidated into one DuckDB file and solved twice in fresh contexts, with a code-based agreement check and a reconciler on disagreement. Uses db_description_withhint.txt hints. 8 of 270 agnews records counted as non-passes: q3 trial 1 and q4 trials 1, 2 and 5 loaded the external HuggingFace ag_news gold labels, and q3 trials 2-5 submitted the gold value with no derivation anywhere in the supplied traces. No off-limits filesystem access anywhere in the run, no gold values in prompts, no per-dataset rules or validator references. Traces cover the winning ensemble stage only, one per trial."
     },
     {
-      "rank": 14,
+      "rank": 15,
       "agent": "MinusX + Claude Sonnet 4.6 + GPT-5.5-mini + Claude Haiku 4.5",
       "trials": 5,
       "passAt1": 0.6518,
@@ -167,7 +179,7 @@
       "date": "2026-05-21"
     },
     {
-      "rank": 15,
+      "rank": 16,
       "agent": "DataBridge + GLM-5.2",
       "trials": 6,
       "passAt1": 0.6137,
@@ -179,7 +191,7 @@
       "note": "6-run average; only 1 run includes open-source execution traces; runs on a large system prompt that hard-codes dataset-specific handling rules (e.g. bracket-notation null codes, weighted decade-averaging, diacritic/parenthetical normalization)"
     },
     {
-      "rank": 16,
+      "rank": 17,
       "agent": "Pi Coding Agent + Claude Opus 4.6",
       "trials": 5,
       "passAt1": 0.6103,
@@ -190,7 +202,7 @@
       "date": "2026-04-21"
     },
     {
-      "rank": 17,
+      "rank": 18,
       "agent": "LabRat (Claude Sonnet 4.6 + Cartographer)",
       "trials": 5,
       "passAt1": 0.6088,
@@ -201,7 +213,7 @@
       "date": "2026-06-24"
     },
     {
-      "rank": 18,
+      "rank": 19,
       "agent": "PromptQL + Gemini 3.1 Pro",
       "trials": 5,
       "passAt1": 0.6,
@@ -212,7 +224,7 @@
       "date": "2026-03-18"
     },
     {
-      "rank": 19,
+      "rank": 20,
       "agent": "PromptQL + Claude Opus 4.6",
       "trials": 5,
       "passAt1": 0.5933,
@@ -223,7 +235,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 20,
+      "rank": 21,
       "agent": "Spacedock (Recce) + Claude Opus 4.6",
       "trials": 5,
       "passAt1": 0.5828,
@@ -234,7 +246,7 @@
       "date": "2026-05-08"
     },
     {
-      "rank": 21,
+      "rank": 22,
       "agent": "Claude Opus 4.6 ReAct",
       "trials": 5,
       "passAt1": 0.5468,
@@ -245,7 +257,7 @@
       "date": "2026-03-18"
     },
     {
-      "rank": 22,
+      "rank": 23,
       "agent": "LabRat (Claude Sonnet 4.6)",
       "trials": 5,
       "passAt1": 0.5138,
@@ -256,7 +268,7 @@
       "date": "2026-06-01"
     },
     {
-      "rank": 23,
+      "rank": 24,
       "agent": "Oracle Forge (Team PaLM) + Gemini 3.1 Pro Preview",
       "trials": 5,
       "passAt1": 0.4721,
@@ -267,7 +279,7 @@
       "date": "2026-04-19"
     },
     {
-      "rank": 24,
+      "rank": 25,
       "agent": "nQuery (gpt-oss-safeguard-120b)",
       "trials": 5,
       "passAt1": 0.4547,
@@ -279,7 +291,7 @@
       "note": "Uses the sanctioned db_description_withhint.txt files (hints used), despite the PR's 'Hint: No' label."
     },
     {
-      "rank": 25,
+      "rank": 26,
       "agent": "Gemini-3-Pro ReAct",
       "trials": 50,
       "passAt1": 0.4546,
@@ -289,7 +301,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 26,
+      "rank": 27,
       "agent": "Oracle Forge (Tenacious Intelligence) + Claude Sonnet 4.6",
       "trials": 5,
       "passAt1": 0.4464,
@@ -300,7 +312,7 @@
       "date": "2026-04-21"
     },
     {
-      "rank": 27,
+      "rank": 28,
       "agent": "GPT-5-mini ReAct",
       "trials": 50,
       "passAt1": 0.3647,
@@ -310,7 +322,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 28,
+      "rank": 29,
       "agent": "GPT-5.2 ReAct",
       "trials": 50,
       "passAt1": 0.2991,
@@ -320,7 +332,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 29,
+      "rank": 30,
       "agent": "Kimi-K2 ReAct",
       "trials": 50,
       "passAt1": 0.2925,
@@ -330,7 +342,7 @@
       "date": "2026-03-02"
     },
     {
-      "rank": 30,
+      "rank": 31,
       "agent": "Oracle Forge (Team Cohere) + Gemini 2.0 Flash",
       "trials": 5,
       "passAt1": 0.1671,
@@ -341,7 +353,7 @@
       "date": "2026-04-21"
     },
     {
-      "rank": 31,
+      "rank": 32,
       "agent": "Gemini-2.5-Flash ReAct",
       "trials": 50,
       "passAt1": 0.1041,

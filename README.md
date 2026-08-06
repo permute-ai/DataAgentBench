@@ -38,32 +38,33 @@ Unlike prior SQL-only or single-database benchmarks, DAB stresses agents under *
 | <sub>3</sub> | <sub>Sarvam Code v0.36 (GLM-5.2)</sub> | <sub>✓</sub> | <sub>0.8208</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-28</sub> | <sub>[#75](https://github.com/ucbepic/DataAgentBench/pull/75)</sub> |
 | <sub>4</sub> | <sub>SCRIBE (Actioneer) (Claude-Opus-4.7)</sub> | <sub>✓</sub> | <sub>0.8185</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-06-26</sub> | <sub>[#67](https://github.com/ucbepic/DataAgentBench/pull/67)</sub> |
 | <sub>5</sub> | <sub>Alkera (Claude-Opus-4.8)</sub> | <sub>✓</sub> | <sub>0.8044</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-15</sub> | <sub>[#69](https://github.com/ucbepic/DataAgentBench/pull/69)</sub> |
-| <sub>6</sub> | <sub>Sarvam Code v0.35 (GLM-5.2)</sub> | <sub>✓</sub> | <sub>0.7812</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-27</sub> | <sub>[#74](https://github.com/ucbepic/DataAgentBench/pull/74)</sub> |
-| <sub>7</sub> | <sub>Spacedock (Recce) (GPT-5.5)</sub> | <sub></sub> | <sub>0.7433</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-06-23</sub> | <sub>[#63](https://github.com/ucbepic/DataAgentBench/pull/63)</sub> |
-| <sub>8</sub> | <sub>LabRat (GPT-5.6-Luna-Max + Cartographer)</sub> | <sub></sub> | <sub>0.7418</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-16</sub> | <sub>[#72](https://github.com/ucbepic/DataAgentBench/pull/72)</sub> |
-| <sub>9</sub> | <sub>Altimate Code (GPT-5.5 + Claude Sonnet 4.6)</sub> | <sub></sub> | <sub>0.7171</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-06-01</sub> | <sub>[#53](https://github.com/ucbepic/DataAgentBench/pull/53)</sub> |
-| <sub>10</sub> | <sub>AgenDA (Claude-Opus-4.8)</sub> | <sub></sub> | <sub>0.6911</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-10</sub> | <sub>[#68](https://github.com/ucbepic/DataAgentBench/pull/68)</sub> |
-| <sub>11</sub> | <sub>Altimate Code (Claude-Sonnet-4.6)</sub> | <sub></sub> | <sub>0.6822</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-05-10</sub> | <sub>[#44](https://github.com/ucbepic/DataAgentBench/pull/44)</sub> |
-| <sub>12</sub> | <sub>Spacedock (Recce) (Claude-Opus-4.8)</sub> | <sub></sub> | <sub>0.6721</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-06-08</sub> | <sub>[#55](https://github.com/ucbepic/DataAgentBench/pull/55)</sub> |
-| <sub>13</sub> | <sub>fabric-rlm (GPT-5.6-Luna-Max) ⁵</sub> | <sub></sub> | <sub>0.6623</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-31</sub> | <sub>[#76](https://github.com/ucbepic/DataAgentBench/pull/76)</sub> |
-| <sub>14</sub> | <sub>MinusX (Claude Sonnet 4.6 + GPT5.5-mini + Claude Haiku 4.5)</sub> | <sub></sub> | <sub>0.6518</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-05-21</sub> | <sub>[#50](https://github.com/ucbepic/DataAgentBench/pull/50)</sub> |
-| <sub>15</sub> | <sub>DataBridge (GLM-5.2)</sub> | <sub>✓</sub> | <sub>0.6137</sub> | <sub>6</sub> | <sub>✓</sub> | <sub>2026-06-22</sub> | <sub>[#61](https://github.com/ucbepic/DataAgentBench/pull/61)</sub> |
-| <sub>16</sub> | <sub>Pi Coding Agent (Claude-Opus-4.6)</sub> | <sub></sub> | <sub>0.6103</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-04-21</sub> | <sub>[#31](https://github.com/ucbepic/DataAgentBench/pull/31)</sub> |
-| <sub>17</sub> | <sub>LabRat (Claude-Sonnet-4.6 + Cartographer)</sub> | <sub></sub> | <sub>0.6088</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-06-24</sub> | <sub>[#65](https://github.com/ucbepic/DataAgentBench/pull/65)</sub> |
-| <sub>18</sub> | <sub>PromptQL (Gemini-3.1-Pro)</sub> | <sub></sub> | <sub>0.6000</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-03-18</sub> | <sub>[#24](https://github.com/ucbepic/DataAgentBench/pull/24)</sub> |
-| <sub>19</sub> | <sub>PromptQL (Claude-Opus-4.6)</sub> | <sub></sub> | <sub>0.5933</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-03-02</sub> | <sub>[#23](https://github.com/ucbepic/DataAgentBench/pull/23)</sub> |
-| <sub>20</sub> | <sub>Spacedock (Recce) (Claude-Opus-4.6)</sub> | <sub></sub> | <sub>0.5828</sub> | <sub>5</sub> | <sub></sub> | <sub>2026-05-08</sub> | <sub>[#47](https://github.com/ucbepic/DataAgentBench/pull/47)</sub> |
-| <sub>21</sub> | <sub>Claude-Opus-4.6</sub> | <sub></sub> | <sub>0.5468</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-03-18</sub> | <sub>[#22](https://github.com/ucbepic/DataAgentBench/pull/22)</sub> |
-| <sub>22</sub> | <sub>LabRat (Claude-Sonnet-4.6) ²</sub> | <sub></sub> | <sub>0.5138</sub> | <sub>5</sub> | <sub></sub> | <sub>2026-06-01</sub> | <sub>[#54](https://github.com/ucbepic/DataAgentBench/pull/54)</sub> |
-| <sub>23</sub> | <sub>Oracle Forge — Team PaLM (Gemini-3.1-Pro-Preview) ³</sub> | <sub></sub> | <sub>0.4721</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-05-10</sub> | <sub>[#37](https://github.com/ucbepic/DataAgentBench/pull/37)</sub> |
-| <sub>24</sub> | <sub>nQuery (gpt-oss-safeguard-120b) NGENUX SOLUTIONS PVT LTD</sub> | <sub></sub> | <sub>0.4547</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-02</sub> | <sub>[#56](https://github.com/ucbepic/DataAgentBench/pull/56)</sub> |
-| <sub>25</sub> | <sub>Gemini-3-Pro</sub> | <sub></sub> | <sub>0.4546</sub> | <sub>50</sub> | <sub>✓</sub> | <sub>2026-03-02</sub> | <sub>—</sub> |
-| <sub>26</sub> | <sub>Oracle Forge — Tenacious Intelligence (Claude-Sonnet-4.6) ⁴</sub> | <sub></sub> | <sub>0.4464</sub> | <sub>5–7</sub> | <sub></sub> | <sub>2026-04-21</sub> | <sub>[#32](https://github.com/ucbepic/DataAgentBench/pull/32)</sub> |
-| <sub>27</sub> | <sub>GPT-5-mini</sub> | <sub></sub> | <sub>0.3647</sub> | <sub>50</sub> | <sub>✓</sub> | <sub>2026-03-02</sub> | <sub>—</sub> |
-| <sub>28</sub> | <sub>GPT-5.2</sub> | <sub></sub> | <sub>0.2991</sub> | <sub>50</sub> | <sub>✓</sub> | <sub>2026-03-02</sub> | <sub>—</sub> |
-| <sub>29</sub> | <sub>Kimi-K2</sub> | <sub></sub> | <sub>0.2925</sub> | <sub>50</sub> | <sub>✓</sub> | <sub>2026-03-02</sub> | <sub>—</sub> |
-| <sub>30</sub> | <sub>Oracle Forge — Team Cohere (Gemini-2.0-Flash)</sub> | <sub></sub> | <sub>0.1671</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-04-21</sub> | <sub>[#38](https://github.com/ucbepic/DataAgentBench/pull/38)</sub> |
-| <sub>31</sub> | <sub>Gemini-2.5-Flash</sub> | <sub></sub> | <sub>0.1041</sub> | <sub>50</sub> | <sub>✓</sub> | <sub>2026-03-02</sub> | <sub>—</sub> |
+| <sub>6</sub> | <sub>LabRat (Claude-Opus-5 + Cartographer) ⁶</sub> | <sub>✓</sub> | <sub>0.8018</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-08-03</sub> | <sub>[#84](https://github.com/ucbepic/DataAgentBench/pull/84)</sub> |
+| <sub>7</sub> | <sub>Sarvam Code v0.35 (GLM-5.2)</sub> | <sub>✓</sub> | <sub>0.7812</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-27</sub> | <sub>[#74](https://github.com/ucbepic/DataAgentBench/pull/74)</sub> |
+| <sub>8</sub> | <sub>Spacedock (Recce) (GPT-5.5)</sub> | <sub></sub> | <sub>0.7433</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-06-23</sub> | <sub>[#63](https://github.com/ucbepic/DataAgentBench/pull/63)</sub> |
+| <sub>9</sub> | <sub>LabRat (GPT-5.6-Luna-Max + Cartographer)</sub> | <sub></sub> | <sub>0.7418</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-16</sub> | <sub>[#72](https://github.com/ucbepic/DataAgentBench/pull/72)</sub> |
+| <sub>10</sub> | <sub>Altimate Code (GPT-5.5 + Claude Sonnet 4.6)</sub> | <sub></sub> | <sub>0.7171</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-06-01</sub> | <sub>[#53](https://github.com/ucbepic/DataAgentBench/pull/53)</sub> |
+| <sub>11</sub> | <sub>AgenDA (Claude-Opus-4.8)</sub> | <sub></sub> | <sub>0.6911</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-10</sub> | <sub>[#68](https://github.com/ucbepic/DataAgentBench/pull/68)</sub> |
+| <sub>12</sub> | <sub>Altimate Code (Claude-Sonnet-4.6)</sub> | <sub></sub> | <sub>0.6822</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-05-10</sub> | <sub>[#44](https://github.com/ucbepic/DataAgentBench/pull/44)</sub> |
+| <sub>13</sub> | <sub>Spacedock (Recce) (Claude-Opus-4.8)</sub> | <sub></sub> | <sub>0.6721</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-06-08</sub> | <sub>[#55](https://github.com/ucbepic/DataAgentBench/pull/55)</sub> |
+| <sub>14</sub> | <sub>fabric-rlm (GPT-5.6-Luna-Max) ⁵</sub> | <sub></sub> | <sub>0.6623</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-31</sub> | <sub>[#76](https://github.com/ucbepic/DataAgentBench/pull/76)</sub> |
+| <sub>15</sub> | <sub>MinusX (Claude Sonnet 4.6 + GPT5.5-mini + Claude Haiku 4.5)</sub> | <sub></sub> | <sub>0.6518</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-05-21</sub> | <sub>[#50](https://github.com/ucbepic/DataAgentBench/pull/50)</sub> |
+| <sub>16</sub> | <sub>DataBridge (GLM-5.2)</sub> | <sub>✓</sub> | <sub>0.6137</sub> | <sub>6</sub> | <sub>✓</sub> | <sub>2026-06-22</sub> | <sub>[#61](https://github.com/ucbepic/DataAgentBench/pull/61)</sub> |
+| <sub>17</sub> | <sub>Pi Coding Agent (Claude-Opus-4.6)</sub> | <sub></sub> | <sub>0.6103</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-04-21</sub> | <sub>[#31](https://github.com/ucbepic/DataAgentBench/pull/31)</sub> |
+| <sub>18</sub> | <sub>LabRat (Claude-Sonnet-4.6 + Cartographer)</sub> | <sub></sub> | <sub>0.6088</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-06-24</sub> | <sub>[#65](https://github.com/ucbepic/DataAgentBench/pull/65)</sub> |
+| <sub>19</sub> | <sub>PromptQL (Gemini-3.1-Pro)</sub> | <sub></sub> | <sub>0.6000</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-03-18</sub> | <sub>[#24](https://github.com/ucbepic/DataAgentBench/pull/24)</sub> |
+| <sub>20</sub> | <sub>PromptQL (Claude-Opus-4.6)</sub> | <sub></sub> | <sub>0.5933</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-03-02</sub> | <sub>[#23](https://github.com/ucbepic/DataAgentBench/pull/23)</sub> |
+| <sub>21</sub> | <sub>Spacedock (Recce) (Claude-Opus-4.6)</sub> | <sub></sub> | <sub>0.5828</sub> | <sub>5</sub> | <sub></sub> | <sub>2026-05-08</sub> | <sub>[#47](https://github.com/ucbepic/DataAgentBench/pull/47)</sub> |
+| <sub>22</sub> | <sub>Claude-Opus-4.6</sub> | <sub></sub> | <sub>0.5468</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-03-18</sub> | <sub>[#22](https://github.com/ucbepic/DataAgentBench/pull/22)</sub> |
+| <sub>23</sub> | <sub>LabRat (Claude-Sonnet-4.6) ²</sub> | <sub></sub> | <sub>0.5138</sub> | <sub>5</sub> | <sub></sub> | <sub>2026-06-01</sub> | <sub>[#54](https://github.com/ucbepic/DataAgentBench/pull/54)</sub> |
+| <sub>24</sub> | <sub>Oracle Forge — Team PaLM (Gemini-3.1-Pro-Preview) ³</sub> | <sub></sub> | <sub>0.4721</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-05-10</sub> | <sub>[#37](https://github.com/ucbepic/DataAgentBench/pull/37)</sub> |
+| <sub>25</sub> | <sub>nQuery (gpt-oss-safeguard-120b) NGENUX SOLUTIONS PVT LTD</sub> | <sub></sub> | <sub>0.4547</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-02</sub> | <sub>[#56](https://github.com/ucbepic/DataAgentBench/pull/56)</sub> |
+| <sub>26</sub> | <sub>Gemini-3-Pro</sub> | <sub></sub> | <sub>0.4546</sub> | <sub>50</sub> | <sub>✓</sub> | <sub>2026-03-02</sub> | <sub>—</sub> |
+| <sub>27</sub> | <sub>Oracle Forge — Tenacious Intelligence (Claude-Sonnet-4.6) ⁴</sub> | <sub></sub> | <sub>0.4464</sub> | <sub>5–7</sub> | <sub></sub> | <sub>2026-04-21</sub> | <sub>[#32](https://github.com/ucbepic/DataAgentBench/pull/32)</sub> |
+| <sub>28</sub> | <sub>GPT-5-mini</sub> | <sub></sub> | <sub>0.3647</sub> | <sub>50</sub> | <sub>✓</sub> | <sub>2026-03-02</sub> | <sub>—</sub> |
+| <sub>29</sub> | <sub>GPT-5.2</sub> | <sub></sub> | <sub>0.2991</sub> | <sub>50</sub> | <sub>✓</sub> | <sub>2026-03-02</sub> | <sub>—</sub> |
+| <sub>30</sub> | <sub>Kimi-K2</sub> | <sub></sub> | <sub>0.2925</sub> | <sub>50</sub> | <sub>✓</sub> | <sub>2026-03-02</sub> | <sub>—</sub> |
+| <sub>31</sub> | <sub>Oracle Forge — Team Cohere (Gemini-2.0-Flash)</sub> | <sub></sub> | <sub>0.1671</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-04-21</sub> | <sub>[#38](https://github.com/ucbepic/DataAgentBench/pull/38)</sub> |
+| <sub>32</sub> | <sub>Gemini-2.5-Flash</sub> | <sub></sub> | <sub>0.1041</sub> | <sub>50</sub> | <sub>✓</sub> | <sub>2026-03-02</sub> | <sub>—</sub> |
 
 <sub>**¹ Methodology.** All Pass@1 scores recomputed on 2026-06-12 by re-running each query's `validate.py` against the current validators (including the regenerated PATENTS ground truths), from the submission JSONs stored in this repository (`submissions/`, `leaderboard_submissions/`) or in the corresponding submission PR branches (`refs/pull/<N>/head`). Pass@1 is the mean over datasets of each dataset's average per-query pass rate.</sub>
 
@@ -74,6 +75,8 @@ Unlike prior SQL-only or single-database benchmarks, DAB stresses agents under *
 <sub>**⁴** Tenacious Intelligence ([#32](https://github.com/ucbepic/DataAgentBench/pull/32)) has 5–7 trials per query (per-query denominators used).</sub>
 
 <sub>**⁵** fabric-rlm ([#76](https://github.com/ucbepic/DataAgentBench/pull/76)) had 8 agnews trials counted as non-passes: 4 loaded external gold labels, and 4 submitted the gold value with no derivation in the supplied traces.</sub>
+
+<sub>**⁶** LabRat ([#84](https://github.com/ucbepic/DataAgentBench/pull/84)) is missing 2 of 270 trials (agnews query 4, infra timeouts), counted as non-passes; excluding them gives 0.8102.</sub>
 
 
 ### How to Submit to the Leaderboard
