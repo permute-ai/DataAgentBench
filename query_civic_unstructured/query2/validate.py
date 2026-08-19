@@ -1,7 +1,18 @@
 import re
 
-GT_PROJECT = "Guardrail Replacement Citywide (FEMA Project)"
-GT_AMOUNT = 12519000
+GT_PROJECT = "Corral Canyon Culvert Repairs"
+GT_AMOUNT = 13460000
+
+# Entity resolution, listed explicitly here (NOT loaded from the ground-truth
+# dataset): canonical project name -> every surface-name variant. The answer is
+# entity-resolved, so naming the project by ANY variant counts.
+ER = {
+    "Corral Canyon Culvert Repairs": [
+        "Corral Canyon Culvert Repairs",
+        "Corral Canyon Culvert Repairs (FEMA Project)",
+        "Corral Canyon Culvert Repairs (FEMA/CalOES Project)",
+    ],
+}
 
 
 def extract_numeric_values(text):
@@ -21,14 +32,20 @@ def _norm(s):
     return re.sub(r'\s+', ' ', s).strip()
 
 
+def _mentions(text_norm, canonical):
+    """Entity-resolve the answer: the canonical project is named if ANY of its
+    variants appears in the output."""
+    return any(_norm(v) in text_norm for v in ER.get(canonical, [canonical]))
+
+
 def validate(llm_output: str):
     text_norm = _norm(llm_output)
 
-    name_found = _norm(GT_PROJECT) in text_norm
+    name_found = _mentions(text_norm, GT_PROJECT)
     amount_found = any(abs(v - GT_AMOUNT) == 0 for v in extract_numeric_values(llm_output))
 
     if name_found and amount_found:
-        return True, "Ground truth project name and amount found in LLM output."
+        return True, "Ground truth project name (entity-resolved) and amount found in LLM output."
     missing = []
     if not name_found:
         missing.append(f"project name '{GT_PROJECT}'")

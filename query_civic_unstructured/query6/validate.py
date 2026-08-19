@@ -1,7 +1,7 @@
 import re
 
 GT_YEAR = 2023
-GT_AMOUNT = 64171000
+GT_AMOUNT = 88615000
 
 
 def extract_numeric_values(text):

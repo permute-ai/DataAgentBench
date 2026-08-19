@@ -1,5 +1,8 @@
 HINTS:
 - Projects have two types: "capital" and "disaster".
 - Projects have three statuses: "design", "completed", and "not started".
-- Project name formats vary across sources and may need to be canonicalized before comparison.
-- Disaster project names often include suffixes like "(FEMA Project)", "(CalJPIA Project)", or "(CalOES Project)".
+- The same project may appear under different names, so entity resolution is required.
+  - Two names likely refer to the same project if their names or agenda descriptions are semantically similar.
+  - Two names listed separately in the same agenda are likely distinct projects, as a project usually appears once per agenda.
+- Some Funding records have a project_name that is not a real civic project; treat these as noise.
+- An agenda's stated meeting date may be wrong, so cross-check it against the dates its own text mentions.

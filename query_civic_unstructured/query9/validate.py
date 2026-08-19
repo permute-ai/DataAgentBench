@@ -1,9 +1,6 @@
 import re
 
 GROUND_TRUTH = [
-    "Emergency Relief Fund",
-    "Municipal Fund",
-    "Private Donation",
     "Public-Private Partnership",
 ]
 
