@@ -1,6 +1,7 @@
 {
   "updatedAt": "2026-08-18",
   "sources": [
+    "DEPS_DEV_V1 query 1 re-scored 2026-08-18 by re-running its validate.py under a revised validator (accepting any of the 95 packages tied at fifth place on 57779 stars rather than the single tied package recorded in ground_truth.csv, see issue #86), from the same submission JSONs, with no other query changed",
     "All Pass@1 scores recomputed 2026-06-12 by re-running each query's validate.py under the current validators (including the regenerated PATENTS ground truths), from the submission JSONs in this repository or in the corresponding submission PR branches",
     "PromptQL and baseline stratified tables: re-scored 2026-06-12 from the stored submission JSONs"
   ],
@@ -21,7 +22,7 @@
       "rank": 2,
       "agent": "Sentinel (Actioneer) (Fable 5) + Claude Opus 4.7",
       "trials": 5,
-      "passAt1": 0.845,
+      "passAt1": 0.8617,
       "promptGroup": "benchmark-informed",
       "team": "Sentinel (Actioneer)",
       "teamUrl": "https://github.com/ucbepic/DataAgentBench/pull/73",
@@ -33,7 +34,7 @@
       "rank": 3,
       "agent": "Permute Core (Claude Opus 5)",
       "trials": 5,
-      "passAt1": 0.833,
+      "passAt1": 0.8413,
       "promptGroup": "benchmark-informed",
       "team": "Permute",
       "teamUrl": "https://permute.ai",
@@ -45,7 +46,7 @@
       "rank": 4,
       "agent": "Alkera (Fable 5) + Claude Opus 4.8",
       "trials": 5,
-      "passAt1": 0.8328,
+      "passAt1": 0.8411,
       "promptGroup": "benchmark-informed",
       "team": "Alkera",
       "teamUrl": "https://github.com/ucbepic/DataAgentBench/pull/70",
@@ -103,6 +104,17 @@
     },
     {
       "rank": 9,
+      "agent": "Spacedock (Recce) + OpenAI GPT-5.5",
+      "trials": 5,
+      "passAt1": 0.785,
+      "promptGroup": "general-purpose",
+      "team": "Spacedock (Recce)",
+      "teamUrl": "https://github.com/ucbepic/DataAgentBench/pull/63",
+      "prUrl": "https://github.com/ucbepic/DataAgentBench/pull/63",
+      "date": "2026-06-23"
+    },
+    {
+      "rank": 10,
       "agent": "Sarvam Code v0.35 (GLM-5.2)",
       "trials": 5,
       "passAt1": 0.7812,
@@ -114,21 +126,10 @@
       "note": "Single data-engineering agent (sarvam-code CLI v0.35.0, GLM-5.2, max reasoning) running shell + SQL over each task's sanctioned stores, with a deterministic self-consistency answer gate and one blind second solver (original question only, no inherited context) as a cross-check. Uses db_description_withhint.txt hints. Every opening prompt is the verbatim benchmark question with no injected gold values, per-dataset rules, or validator references; no network fetches (the single network attempt fails on DNS) and no off-limits or ground-truth reads. Full execution traces provided for all 270 trials."
     },
     {
-      "rank": 10,
-      "agent": "Spacedock (Recce) + OpenAI GPT-5.5",
-      "trials": 5,
-      "passAt1": 0.7433,
-      "promptGroup": "general-purpose",
-      "team": "Spacedock (Recce)",
-      "teamUrl": "https://github.com/ucbepic/DataAgentBench/pull/63",
-      "prUrl": "https://github.com/ucbepic/DataAgentBench/pull/63",
-      "date": "2026-06-23"
-    },
-    {
       "rank": 11,
       "agent": "LabRat (GPT-5.6 Luna Max + Cartographer)",
       "trials": 5,
-      "passAt1": 0.7418,
+      "passAt1": 0.7751,
       "promptGroup": "general-purpose",
       "team": "LabRat",
       "teamUrl": "https://github.com/esagduyu/labrat",
@@ -139,7 +140,7 @@
       "rank": 12,
       "agent": "Altimate Code + GPT-5.5 + Claude Sonnet 4.6",
       "trials": 5,
-      "passAt1": 0.7171,
+      "passAt1": 0.7588,
       "promptGroup": "general-purpose",
       "team": "Altimate Code",
       "teamUrl": "https://github.com/ucbepic/DataAgentBench/pull/53",
@@ -150,7 +151,7 @@
       "rank": 13,
       "agent": "AgenDA + Claude Opus 4.8",
       "trials": 5,
-      "passAt1": 0.6911,
+      "passAt1": 0.7244,
       "promptGroup": "general-purpose",
       "team": "AgenDA",
       "teamUrl": "https://github.com/ucbepic/DataAgentBench/pull/68",
@@ -159,6 +160,18 @@
     },
     {
       "rank": 14,
+      "agent": "fabric-rlm (GPT-5.6 Luna Max)",
+      "trials": 5,
+      "passAt1": 0.6956,
+      "promptGroup": "general-purpose",
+      "team": "fabric-rlm",
+      "teamUrl": "https://github.com/pawarbi/fabric-rlm-core",
+      "prUrl": "https://github.com/ucbepic/DataAgentBench/pull/76",
+      "date": "2026-07-31",
+      "note": "Notebook-importable Recursive Language Model library (PyPI fabric-rlm), not an agent CLI: per trial the dataset's sanctioned stores are consolidated into one DuckDB file and solved twice in fresh contexts, with a code-based agreement check and a reconciler on disagreement. Uses db_description_withhint.txt hints. 8 of 270 agnews records counted as non-passes: q3 trial 1 and q4 trials 1, 2 and 5 loaded the external HuggingFace ag_news gold labels, and q3 trials 2-5 submitted the gold value with no derivation anywhere in the supplied traces. No off-limits filesystem access anywhere in the run, no gold values in prompts, no per-dataset rules or validator references. Traces cover the winning ensemble stage only, one per trial."
+    },
+    {
+      "rank": 15,
       "agent": "Altimate Code + Claude Sonnet 4.6",
       "trials": 5,
       "passAt1": 0.6822,
@@ -169,10 +182,10 @@
       "date": "2026-05-10"
     },
     {
-      "rank": 15,
+      "rank": 16,
       "agent": "Spacedock (Recce) + Claude Opus 4.8",
       "trials": 5,
-      "passAt1": 0.6721,
+      "passAt1": 0.6804,
       "promptGroup": "general-purpose",
       "team": "Spacedock (Recce)",
       "teamUrl": "https://github.com/ucbepic/DataAgentBench/pull/55",
@@ -180,22 +193,10 @@
       "date": "2026-06-08"
     },
     {
-      "rank": 16,
-      "agent": "fabric-rlm (GPT-5.6 Luna Max)",
-      "trials": 5,
-      "passAt1": 0.6623,
-      "promptGroup": "general-purpose",
-      "team": "fabric-rlm",
-      "teamUrl": "https://github.com/pawarbi/fabric-rlm-core",
-      "prUrl": "https://github.com/ucbepic/DataAgentBench/pull/76",
-      "date": "2026-07-31",
-      "note": "Notebook-importable Recursive Language Model library (PyPI fabric-rlm), not an agent CLI: per trial the dataset's sanctioned stores are consolidated into one DuckDB file and solved twice in fresh contexts, with a code-based agreement check and a reconciler on disagreement. Uses db_description_withhint.txt hints. 8 of 270 agnews records counted as non-passes: q3 trial 1 and q4 trials 1, 2 and 5 loaded the external HuggingFace ag_news gold labels, and q3 trials 2-5 submitted the gold value with no derivation anywhere in the supplied traces. No off-limits filesystem access anywhere in the run, no gold values in prompts, no per-dataset rules or validator references. Traces cover the winning ensemble stage only, one per trial."
-    },
-    {
       "rank": 17,
       "agent": "MinusX + Claude Sonnet 4.6 + GPT-5.5-mini + Claude Haiku 4.5",
       "trials": 5,
-      "passAt1": 0.6518,
+      "passAt1": 0.6601,
       "promptGroup": "general-purpose",
       "team": "MinusX",
       "teamUrl": "https://github.com/ucbepic/DataAgentBench/pull/50",
@@ -273,7 +274,7 @@
       "rank": 24,
       "agent": "Claude Opus 4.6 ReAct",
       "trials": 5,
-      "passAt1": 0.5468,
+      "passAt1": 0.5551,
       "promptGroup": "general-purpose",
       "team": "EPIC Data Lab",
       "teamUrl": "https://epic.berkeley.edu/",
@@ -304,6 +305,16 @@
     },
     {
       "rank": 27,
+      "agent": "Gemini-3-Pro ReAct",
+      "trials": 50,
+      "passAt1": 0.4663,
+      "promptGroup": "general-purpose",
+      "team": "EPIC Data Lab",
+      "teamUrl": "https://epic.berkeley.edu/",
+      "date": "2026-03-02"
+    },
+    {
+      "rank": 28,
       "agent": "nQuery (gpt-oss-safeguard-120b)",
       "trials": 5,
       "passAt1": 0.4547,
@@ -313,16 +324,6 @@
       "prUrl": "https://github.com/ucbepic/DataAgentBench/pull/56",
       "date": "2026-07-02",
       "note": "Uses the sanctioned db_description_withhint.txt files (hints used), despite the PR's 'Hint: No' label."
-    },
-    {
-      "rank": 28,
-      "agent": "Gemini-3-Pro ReAct",
-      "trials": 50,
-      "passAt1": 0.4546,
-      "promptGroup": "general-purpose",
-      "team": "EPIC Data Lab",
-      "teamUrl": "https://epic.berkeley.edu/",
-      "date": "2026-03-02"
     },
     {
       "rank": 29,
@@ -339,7 +340,7 @@
       "rank": 30,
       "agent": "GPT-5-mini ReAct",
       "trials": 50,
-      "passAt1": 0.3647,
+      "passAt1": 0.3663,
       "promptGroup": "general-purpose",
       "team": "EPIC Data Lab",
       "teamUrl": "https://epic.berkeley.edu/",
@@ -380,7 +381,7 @@
       "rank": 34,
       "agent": "Gemini-2.5-Flash ReAct",
       "trials": 50,
-      "passAt1": 0.1041,
+      "passAt1": 0.1049,
       "promptGroup": "general-purpose",
       "team": "EPIC Data Lab",
       "teamUrl": "https://epic.berkeley.edu/",
