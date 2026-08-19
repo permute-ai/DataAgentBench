@@ -10,13 +10,13 @@
       "rank": 1,
       "agent": "Permute EQ (Claude Opus 5)",
       "trials": 5,
-      "passAt1": 0.8658,
+      "passAt1": 0.8713,
       "promptGroup": "benchmark-informed",
       "team": "Permute",
       "teamUrl": "https://permute.ai",
       "prUrl": "https://github.com/ucbepic/DataAgentBench/pull/88",
       "date": "2026-08-18",
-      "note": "Learned evidence layer plus an independent execution agent. Per query a frozen 'Arbiter1' evidence JSON (column and relation routing, data previews, an execution plan) is supplied as a queryable table, and a fresh Claude Opus 5 agent (max reasoning, 100 steps) answers over the sanctioned stores through DuckDB and a calculator. Uses db_description_withhint.txt hints, delivered in full for all 12 datasets. No web, shell or document-search tool. Trace audit found no external fetches and no reads of ground truth, validators, prior runs or other submissions; DuckDB glob/read_text are unfiltered and were used in some stockmarket trials, but returned only sanctioned parquet stores and one benchmark hints file already present in the prompt. Two fixed prompts were used across a 27/27 split; the second carries three question-scoped rules, two presentational and one, scoped to GITHUB_REPOS q1, governing population selection. Scored on the answer section only: responses also contain contract tables and audits that can name the gold value while the stated answer differs, which inflates full-text scoring from 0.8658 to 0.9133. Full execution traces provided for all 270 trials."
+      "note": "Learned evidence layer plus an independent execution agent. Per query a frozen 'Arbiter1' evidence JSON (column and relation routing, data previews, an execution plan) is supplied as a queryable table, and a fresh Claude Opus 5 agent (max reasoning, 100 steps) answers over the sanctioned stores through DuckDB and a calculator. Uses db_description_withhint.txt hints, delivered in full for all 12 datasets. No web, shell or document-search tool. Trace audit found no external fetches and no reads of ground truth, validators, prior runs or other submissions; DuckDB glob/read_text are unfiltered and were used in some stockmarket trials, but returned only sanctioned parquet stores and one benchmark hints file already present in the prompt. Two fixed prompts were used across a 27/27 split; the second carries three question-scoped rules, two presentational and one, scoped to GITHUB_REPOS q1, governing population selection. Scored on the answer section only: responses also contain contract tables and audits that can name the gold value while the stated answer differs, which inflates full-text scoring from 0.8713 to 0.9133. One bookreview trial was re-scored upward after the answer-section rule was found to truncate before a later 'Matching Books' table whose titles were present in the answer. Full execution traces provided for all 270 trials."
     },
     {
       "rank": 2,

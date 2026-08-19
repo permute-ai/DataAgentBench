@@ -33,7 +33,7 @@ Unlike prior SQL-only or single-database benchmarks, DAB stresses agents under *
 
 | <sub>Rank</sub> | <sub>Model</sub> | <sub>Tuned prompt</sub> | <sub>Pass@1 ¹</sub> | <sub>Trials</sub> | <sub>Hints</sub> | <sub>Date</sub> | <sub>Submission</sub> |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| <sub>1</sub> | <sub>Permute EQ (Claude-Opus-5)</sub> | <sub>✓</sub> | <sub>0.8658</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-08-18</sub> | <sub>[#88](https://github.com/ucbepic/DataAgentBench/pull/88)</sub> |
+| <sub>1</sub> | <sub>Permute EQ (Claude-Opus-5)</sub> | <sub>✓</sub> | <sub>0.8713</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-08-18</sub> | <sub>[#88](https://github.com/ucbepic/DataAgentBench/pull/88)</sub> |
 | <sub>2</sub> | <sub>Sentinel (Actioneer) (Fable-5 + Claude-Opus-4.7)</sub> | <sub>✓</sub> | <sub>0.8617</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-20</sub> | <sub>[#73](https://github.com/ucbepic/DataAgentBench/pull/73)</sub> |
 | <sub>3</sub> | <sub>Permute Core (Claude-Opus-5)</sub> | <sub>✓</sub> | <sub>0.8413</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-08-05</sub> | <sub>[#85](https://github.com/ucbepic/DataAgentBench/pull/85)</sub> |
 | <sub>4</sub> | <sub>Alkera (Fable-5 + Claude-Opus-4.8)</sub> | <sub>✓</sub> | <sub>0.8411</sub> | <sub>5</sub> | <sub>✓</sub> | <sub>2026-07-14</sub> | <sub>[#70](https://github.com/ucbepic/DataAgentBench/pull/70)</sub> |
